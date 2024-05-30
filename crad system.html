@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="../sesson1/css/bootstrap.min.css">
+</head>
+
+<body>
+
+    <div class="w-75 m-auto py-5">
+
+        <div class="form-group">
+
+            <label for="productName">productName</label>
+
+            <input class="form-control" type="text" id="productName">
+            <div id="userNameAlert" class="alert d-none alert-danger ">
+                <p>user Name must start with uppeCase </p>
+            </div>
+        </div>
+
+        <div class="form-group">
+
+            <label for="productprice">productprice</label>
+
+            <input class="form-control" type="number" id="productprice">
+            <div id="priceAlert" class="alert-danger d-lg-none alert">
+                <p>the frist digit mustnt be 0 and the other digits be from 1 to 6</p>
+            </div>
+        </div>
+        <div class="form-group">
+
+            <label for="productCatgory">productCatgory</label>
+
+            <input class="form-control" type="text" id="productCatgory">
+            <div id="categoryAlert" class="alert d-none alert-danger ">
+                <p> must start with uppeCase and the other be from 3 to 8 in small case</p>
+            </div>
+
+        </div>
+        <div class="form-group">
+
+            <label for="productDec">productDec</label>
+
+            <textarea  class="form-control" type="text" id="productDec"></textarea>
+            <div id="decAlert" class="alert d-none alert-danger ">
+                <p> must start with uppeCase and the other be from 1 to 500 in small case</p>
+            </div>
+
+        </div>
+        <button class="btn btn-outline-info" onclick="addProduct()" id="addbtn">add product</button>
+    </div>
+
+        
+
+    <div class="w-75 m-auto py-3">
+
+
+        <input onkeyup="searchProduct(this.value)" placeholder="search product" class="form-control w-75 m-auto" type="text">
+       
+
+        <table class="table">
+            <thead>
+                <th>index</th>
+                <th>productName</th>
+                <th>productprice</th>
+                <th>productCatgory</th>
+                <th>productDec</th>
+                <th>update</th>
+                <th>delete</th>
+
+            </thead>
+
+            <tbody id="tableBody">
+
+            </tbody>
+
+
+        </table>
+
+
+      
+
+
+    </div>
+
+
+    <script  src="indix.js"></script>
+</body>
+
+</html>
